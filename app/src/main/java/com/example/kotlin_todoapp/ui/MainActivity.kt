@@ -1,11 +1,14 @@
-package com.example.kotlin_todoapp
+package com.example.kotlin_todoapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kotlin_todoapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_add_edit_task)
+        setContentView(R.layout.activity_main)
     }
 }

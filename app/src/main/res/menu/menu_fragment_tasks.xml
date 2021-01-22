@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="검색"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always|collapseActionView"/>
+
+    <item
+        android:icon="@drawable/ic_sort"
+        android:title="정렬"
+        app:showAsAction="always">
+
+        <menu>
+           <item
+               android:id="@+id/action_sort_by_name"
+               android:title="이름순"/>
+
+           <item
+               android:id="@+id/action_sort_by_date_created"
+               android:title="날짜순"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action_hide_completed_tasks"
+        android:checkable="true"
+        android:title="완료작업 숨기기"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_delete_all_completed_tasks"
+        android:title="완료작업 삭제하기"
+        app:showAsAction="never"
+        />
+
+
+</menu>
