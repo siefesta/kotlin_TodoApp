@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
@@ -33,7 +32,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
 
     private val viewModel: TasksViewModel by viewModels()
 
-    private lateinit var searchView : SearchView
+    private lateinit var searchView : androidx.appcompat.widget.SearchView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -95,12 +94,12 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
 
                     //add 버튼 클릭
                     is TasksViewModel.TasksEvent.NavigateToAddTaskScreen -> {
-                         val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(null, "추가하기")
+                         val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(null, "추가")
                          findNavController().navigate(action)
                     }
 
                     is TasksViewModel.TasksEvent.NavigateToEditTaskScreen -> {
-                        val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(event.task, "수정하기")
+                        val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(event.task, "수정")
                         findNavController().navigate(action)
                     }
                     is TasksViewModel.TasksEvent.ShowTaskSavedConfirmationMessage -> {
@@ -132,7 +131,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
         inflater.inflate(R.menu.menu_fragment_tasks, menu)
 
         val searchItem = menu.findItem(R.id.action_search)
-        searchView = searchItem.actionView as SearchView
+        searchView = searchItem.actionView as androidx.appcompat.widget.SearchView
 
         val pendingQuery = viewModel.searchQuery.value
         if (pendingQuery != null && pendingQuery.isNotEmpty()) {
@@ -141,7 +140,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
         }
 
         searchView.onQueryTextChanged {
-            viewModel.searchQuery.value = it
+           viewModel.searchQuery.value = it
         }
 
         viewLifecycleOwner.lifecycleScope.launch {

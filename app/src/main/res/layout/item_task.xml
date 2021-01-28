@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         tools:text="Example item"
         android:maxLines="1"
+        android:textSize="17dp"
         android:layout_toStartOf="@+id/label_priority"
         android:ellipsize="end"
         android:textColor="@color/black"
@@ -29,9 +30,9 @@
 
     <ImageView
         android:id="@+id/label_priority"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_priority"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/star"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"/>
 

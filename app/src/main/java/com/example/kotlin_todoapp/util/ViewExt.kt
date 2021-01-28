@@ -1,6 +1,6 @@
 package com.example.kotlin_todoapp.util
 
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 
 inline fun SearchView.onQueryTextChanged(crossinline listener : (String) -> Unit) {
     this.setOnQueryTextListener(object : SearchView.OnQueryTextListener {

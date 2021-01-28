@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.example.kotlin_todoapp.ui.tasks.TasksFragment"
-        android:label="할일"
+        android:label="Todo 리스트"
         tools:layout="@layout/fragment_tasks">
         <action
             android:id="@+id/action_tasksFragment_to_addEditTaskFragment"
