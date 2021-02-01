@@ -13,4 +13,4 @@ MVVM Todo 체크리스트 어플리케이션
 
 
 
-<img src="https://user-images.githubusercontent.com/75350289/106437815-01fcbc80-64b9-11eb-85a1-d18ed3d07787.png" Width="60%" height="60%"/>
+<img src="https://user-images.githubusercontent.com/75350289/106437815-01fcbc80-64b9-11eb-85a1-d18ed3d07787.png" Width="75%" height="75%"/>
